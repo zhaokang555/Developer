@@ -1,0 +1,20 @@
+﻿生成启动时间为 2015/10/6 16:48:08。
+     1>项目“C:\Developer\Qt_VS\Dll1\Dll1\Dll1.Windows\Dll1.Windows.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\~软件\vsCommunity2013\VC\bin\CL.exe /c /IC:\Developer\Qt_VS\Dll1\Dll1\Dll1.Windows\ /I"Generated Files\\" /IDebug\ /IC:\Developer\Qt_VS\Dll1\Dll1\Dll1.Shared\ /ZI /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_APP /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"pch.h" /Fp"Debug\Dll1.Windows.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt C:\Developer\Qt_VS\Dll1\Dll1\Dll1.Shared\pch.cpp
+         pch.cpp
+         C:\~软件\vsCommunity2013\VC\bin\CL.exe /c /IC:\Developer\Qt_VS\Dll1\Dll1\Dll1.Windows\ /I"Generated Files\\" /IDebug\ /IC:\Developer\Qt_VS\Dll1\Dll1\Dll1.Shared\ /ZI /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_APP /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"pch.h" /Fp"Debug\Dll1.Windows.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt C:\Developer\Qt_VS\Dll1\Dll1\Dll1.Shared\Dll1.cpp C:\Developer\Qt_VS\Dll1\Dll1\Dll1.Shared\dllmain.cpp
+         Dll1.cpp
+         dllmain.cpp
+       Link:
+         C:\~软件\vsCommunity2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Developer\Qt_VS\Dll1\Debug\Dll1.Windows\Dll1.Windows.dll" /INCREMENTAL /NOLOGO kernel32.lib /MANIFEST:NO /DEBUG /PDB:"C:\Developer\Qt_VS\Dll1\Debug\Dll1.Windows\Dll1.Windows.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /APPCONTAINER /WINMD:NO /WINMDFILE:"C:\Developer\Qt_VS\Dll1\Debug\Dll1.Windows\Dll1.winmd" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Developer\Qt_VS\Dll1\Debug\Dll1.Windows\Dll1.Windows.lib" /MACHINE:X86 /DLL Debug\Dll1.obj
+         Debug\dllmain.obj
+         Debug\pch.obj
+         Dll1.Windows.vcxproj -> C:\Developer\Qt_VS\Dll1\Debug\Dll1.Windows\Dll1.Windows.dll
+       _GenerateProjectPriFileCore:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x64\MakePri.exe New -ProjectRoot C:\Developer\Qt_VS\Dll1\Dll1\Dll1.Windows\ -ConfigXml Debug\priconfig.xml -OutputFile C:\Developer\Qt_VS\Dll1\Debug\Dll1.Windows\Dll1.pri -IndexName Dll1 -Verbose -Overwrite  
+     1>已完成生成项目“C:\Developer\Qt_VS\Dll1\Dll1\Dll1.Windows\Dll1.Windows.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:04.70

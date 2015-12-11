@@ -1,0 +1,11 @@
+﻿生成启动时间为 2015/10/6 17:22:10。
+     1>项目“C:\Developer\Qt_VS\Project1\Project1\Project1.vcxproj”在节点 2 上(ClCompile 个目标)。
+     1>ClCompile:
+         C:\~软件\vsCommunity2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Project1.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt DLLMain.cpp
+         DLLMain.cpp
+     1>c:\developer\qt_vs\project1\project1\dllmain.cpp(1): fatal error C1083: 无法打开预编译头文件: “Debug\Project1.pch”: No such file or directory
+     1>已完成生成项目“C:\Developer\Qt_VS\Project1\Project1\Project1.vcxproj”(ClCompile 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.14

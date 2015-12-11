@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var name = "a";
+        var age = 23;
+        function b() {
+            this.name = "b";
+            this.age = 24;
+        }
+        var p = new b();
+        with (document) {
+            write(age + "<br />");
+            write(name + "<br/>");
+            with (p) {
+                write(age + "<br/>");
+                write(name);
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
