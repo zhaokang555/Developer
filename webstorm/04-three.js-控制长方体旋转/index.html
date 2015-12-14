@@ -12,9 +12,11 @@
         <div>
             <button onclick="stop()">停止</button>
             <button onclick="begin()">继续</button>
-            <button onclick="speedFaster()">加速</button>
-            <button onclick="speedSlower()">减速</button>
-            <span>旋转速度：</span><span id = "speed"></span>
+            <div>
+                <button onclick="speedFaster()">加速</button>
+                <button onclick="speedSlower()">减速</button>
+                <span>旋转速度：</span><span id = "speed"></span><span>弧度/帧</span>
+            </div>
         </div>
 
 
@@ -34,8 +36,8 @@
             
             var stat = null;
 
-            var speed = 0.03;
-            
+            var speed = 0.04;
+
             function init() {
                 $("#speed").text(speed.toFixed(2));
 
@@ -90,12 +92,12 @@
                     id = requestAnimationFrame(draw);
             }
             function speedFaster() {
-                speed += 0.01;
+                speed += 0.02;
                 $("#speed").text(speed.toFixed(2));
             }
             function speedSlower() {
-                if (speed >= 0.01)
-                    speed -= 0.01;
+                if (speed > 0.03)
+                    speed -= 0.02;
                 $("#speed").text(speed.toFixed(2));
             }
         </script>
