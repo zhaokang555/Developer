@@ -22,3 +22,29 @@ function area_of_circle(r, pi) {
     let area = pi * r * r;
     return area;
 }
+
+// 3.
+// 除了列出的3种语言外，请再添加Pascal、Lua和Ruby，然后按字母顺序排序节点：
+// <!-- HTML结构 -->
+// <div id="test-div">
+//     <ul>
+//         <li><span>JavaScript</span></li>
+//         <li><span>Python</span></li>
+//         <li><span>Swift</span></li>
+//     </ul>
+// </div>
+'use strict';
+var ul=$("#test-div > ul");
+["Pascal","Lua","Ruby"].map( (x) => {
+   	ul.append("<li><span>"+x+"</span></li>");
+});
+var li =ul.find('li');
+li.sort( (x,y) => {
+	if ( $(x).text() < $(y).text() ) 
+		return -1;
+	else 
+		return 1;
+});
+ul.append(li);
+
+
