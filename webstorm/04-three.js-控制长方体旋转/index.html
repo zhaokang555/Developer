@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="three.js"></script>
+        <script src="stat.js"></script>
+        <script src="jquery.js"></script>
+    </head>
+    
+    <body onload="init()">
+        <canvas id="mainCanvas" width="400px" height="300px" ></canvas>
+        <div>
+            <button onclick="stop()">停止</button>
+            <button onclick="begin()">继续</button>
+            <br />
+            <button onclick="speedFaster()">加速</button>
+            <button onclick="speedSlower()">减速</button>
+            <span>旋转速度：</span><span id = "speed"></span><span>弧度/帧</span>
+            
+        </div>
+
+
+        <script>
+            var requestAnimationFrame = window.requestAnimationFrame 
+                    || window.mozRequestAnimationFrame
+                    || window.webkitRequestAnimationFrame
+                    || window.msRequestAnimationFrame;
+            window.requestAnimationFrame = requestAnimationFrame;
+                
+            var scene = null;
+            var camera = null;
+            var renderer = null;
+            
+            var mesh = null;
+            var id = null;
+            
+            var stat = null;
+
+            var speed = 0.04;
+
+            function init() {
+                $("#speed").text(speed.toFixed(2));
+
+                stat = new Stats();
+                stat.domElement.style.position = 'absolute';
+                stat.domElement.style.right = '0px';
+                stat.domElement.style.top = '0px';
+                document.body.appendChild(stat.domElement);
+                
+                renderer = new THREE.WebGLRenderer({
+                    canvas: document.getElementById('mainCanvas')
+                });
+                renderer.setClearColor(0x000000);
+                scene = new THREE.Scene();
+                
+                camera = new THREE.OrthographicCamera(-5, 5, 3.75, -3.75, 0.1, 100);
+                camera.position.set(5, 5, 20);
+                camera.lookAt(new THREE.Vector3(0, 0, 0));
+                scene.add(camera);
+                
+                mesh = new THREE.Mesh(new THREE.CubeGeometry(1, 2, 3), 
+                    new THREE.MeshLambertMaterial({
+                        color: 0xffff00
+                }));
+                scene.add(mesh);
+                
+                var light = new THREE.DirectionalLight(0xffffff);
+                light.position.set(20, 10, 5);
+                scene.add(light);
+                
+                id = requestAnimationFrame(draw);
+            }
+            
+            function draw() {
+                stat.begin();
+                
+                mesh.rotation.y = (mesh.rotation.y + speed) % (Math.PI * 2);
+                renderer.render(scene, camera);
+                id = requestAnimationFrame(draw);
+                
+                stat.end();
+            }
+            
+            function stop() {
+                if (id !== null) {
+                    cancelAnimationFrame(id);
+                    id = null;
+                }
+            }
+            function begin() {
+                if (id == null) 
+                    id = requestAnimationFrame(draw);
+            }
+            function speedFaster() {
+                speed += 0.02;
+                $("#speed").text(speed.toFixed(2));
+            }
+            function speedSlower() {
+                if (speed > 0.03)
+                    speed -= 0.02;
+                $("#speed").text(speed.toFixed(2));
+            }
+        </script>
+    </body>
+</html>
