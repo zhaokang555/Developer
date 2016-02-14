@@ -47,4 +47,47 @@ li.sort( (x,y) => {
 });
 ul.append(li);
 
+// 4.
+// 实现函数range([start,]stop[,step])返回一个数组（step大于1）
+// > range(1,11); => [1,2,3,4,5,6,7,8,9,10]
+// > range(0); => []
+// > range(10); => [0,1,2,3,4,5,6,7,8,9]
+// > range(0,30,5); => [0,5,10,15,20,25
+function range() {
+    var arr = [],
+        start = 0,
+        stop = 0,
+        step = 1;
+
+    switch(arguments.length) {
+        case 1:
+            stop = arguments[0];
+            break;
+        case 2:
+            start = arguments[0];
+            stop = arguments[1];
+            break;
+        case 3:
+            start = arguments[0];
+            stop = arguments[1];
+            step = arguments[2];
+            break;
+        default:
+            throw Error('number of arguments must be 1, 2 or 3');
+    }
+
+    if (step < 1) 
+        throw Error('step must >= 1');
+
+    for (var i = start; i < stop; i += step) {
+        arr.push(i);
+    };
+
+    return arr;
+}
+
+
+
+
+
 

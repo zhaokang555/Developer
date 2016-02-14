@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <style type="text/css">
-        div#outer {width: 500px;}
-        div#inner {text-indent: 10%;}
-        p {width: 200px;}
-    </style>
+<meta charset="utf-8">
+<title>Title</title>
 </head>
+
 <body>
-<div id="outer">
-    <div id="inner">some text. some text. some text. some text. some text. some text. some text. some text. some text.
-        <p>this is a paragragh. this is a paragragh. this is a paragragh.</p>
-    </div>
-</div>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<script>
+    var ul = document.getElementsByTagName('ul')[0];
+    ul.addEventListener('click', function(event) {
+        if (event.target.tagName.toLowerCase() === 'li') {
+            console.log(typeof event.target.tagName);
+            console.log(event.target.tagName);
+
+            event.stopPropagation();
+
+            event.target.innerText = 'you clicked me.';
+        }
+    });
+</script>
 </body>
 </html>
