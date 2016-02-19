@@ -4,20 +4,15 @@
     <meta charset="utf-8">
 </head>
 <body>
-    <input type="button" value="继续" onclick='st();'/>
+    <input type="button" value="继续" onclick='bar();'/>
     <script>
-    /*需要执行的函数*/
-    function test(x){
-        console.log(x);
-        alert(x++);
-        console.log(x);
-        alert(x++);
-        return function(){
-            console.log(x);
-            alert(x++);
+        function foo(x){
+            return function(){
+                console.log(x++);
+            }
         }
-    }
-    var st = test(10);
-</script>
+        var bar = foo(10);
+    </script>
 </body>
 </html>
+
