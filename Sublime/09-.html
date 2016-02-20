@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>picture</title>
+    <style type="text/css">
+        #rectangle {
+            background: #FFF;
+            border: 10px solid #999999;
+            padding: 10px;
+            height: 120px;
+            width: 200px;
+        }
+        #circle {
+            position:absolute;
+            margin-left: 140px;
+            margin-top: 10px;
+            width: 40px;
+            height: 40px;
+            background: #999999; 
+            -moz-border-radius: 20px; 
+            -webkit-border-radius: 20px; 
+            border-radius: 20px;
+        }
+        #triangleLeft {
+            width: 0; 
+            height: 0; 
+            position:absolute;
+            margin-top: 40px;
+            border-bottom: 80px solid #999999; 
+            border-left: 50px solid transparent; 
+            border-right: 70px solid transparent; 
+        }
+        #triangleRight {
+            width: 0; 
+            height: 0; 
+            position:absolute;
+            margin-top: 60px;
+            margin-left: 90px;
+            border-bottom: 60px solid #999999; 
+            border-left: 30px solid transparent; 
+            border-right: 70px solid transparent; 
+        }
+    </style>
+</head>
+<body>
+    <div id="rectangle">
+        <span id="circle"></span>
+        <span id="triangleLeft"></span>
+        <span id="triangleRight"></span>
+    </div>
+</body>
+</html>
+
