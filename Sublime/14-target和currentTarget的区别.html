@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        div {
+            margin: 1rem;
+            padding: 1rem;
+        }
+
+        #a {background-color: #f00;}
+        #b {background-color: #0f0;}
+        #c {background-color: #00f;}
+        #d {background-color: #aaa;}
+    </style>
+</head>
+<body>
+    <div id="a">a
+        <div id="b">b
+          <div id="c">c
+            <div id="d">d</div>
+          </div>
+        </div>
+    </div>
+
+    <script>
+        function logTarget(e) {
+            console.log('target:' + e.target.id + ' & currentTarget:' + e.currentTarget.id);
+        }
+
+        document.getElementById('a').addEventListener('click', logTarget, false);
+        document.getElementById('b').addEventListener('click', logTarget, false);
+        document.getElementById('c').addEventListener('click', logTarget, false);
+        document.getElementById('d').addEventListener('click', logTarget, false);
+    </script>
+</body>
+</html>
+
