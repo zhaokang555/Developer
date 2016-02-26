@@ -1,4 +1,6 @@
-::-webkit-scrollbar {
+
+/*赵康*/
+/*::-webkit-scrollbar {
 width:10px;
 height:10px;
 
@@ -26,11 +28,12 @@ background-color:#6fabec;
 }
 
 ::-webkit-scrollbar-thumb:active {
+
 height:50px;
 -webkit-border-radius:2px;
 background-color:#033367;
 
-}
+}*/
 
 ::selection {
 color:white;
@@ -54,7 +57,9 @@ blockquote {
 margin:20px 0;
 padding:20px 50px;
 border-radius:10px;
-background:url('http://files.cnblogs.com/files/liyunhua/ctrip.gif') no-repeat -75px -20px #f0f0f0;
+/*赵康*/
+/*background:url('http://files.cnblogs.com/files/liyunhua/ctrip.gif') no-repeat -75px -20px #f0f0f0;*/
+background: no-repeat -75px -20px #f0f0f0;
 -ms-border-radius:10px;
 
 }
@@ -564,7 +569,8 @@ background:#6da47d;
 
 code {
 padding:2px 4px;
-white-space:nowrap;
+/*赵康*/
+/*white-space:nowrap;*/
 color:rgb(221,17,68);
 border:1px solid rgb(225,225,232);
 -webkit-border-radius:3px;
