@@ -16,14 +16,11 @@
     var ul = document.getElementsByTagName('ul')[0];
     ul.addEventListener('click', function(event) {
         if (event.target.tagName.toLowerCase() === 'li') {
-            console.log(typeof event.target.tagName);
             console.log(event.target.tagName);
-
-            event.stopPropagation();
-
             event.target.innerText = 'you clicked me.';
+            // event.stopPropagation();
         }
-    });
+    }, false);
 </script>
 </body>
 </html>
