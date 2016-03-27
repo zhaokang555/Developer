@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div#center {
+            /* important: */
+            position : fixed;
+            top : 50%;
+            left : 50%;
+            margin-top : -150px; /* margin-top的大小一定要是height的一半 */
+            margin-left : -150px; /* margin-left的大小一定要是width的一半 */
+
+            /* not important: */
+            width : 300px;
+            height : 300px;
+            border : 1px solid red;
+        }
+
+        button#close {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="center">
+        <button id="close">关闭</button>
+    </div>
+
+    <script>
+        var closeBtn = document.getElementById('close');
+        closeBtn.onclick = function(event) {
+            event.target.parentNode.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
