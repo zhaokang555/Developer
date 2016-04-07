@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+</head>
+<body>
+<script type="text/javascript">
+    document.onclick = function (event) {
+        var e = event || window.event;
+        console.log('client: ' + e.clientX + ' ' + e.clientY);
+        console.log('screen: ' + e.screenX + ' ' + e.screenY);
+        console.log('screenX / clientX: \n' + e.screenX / e.clientX);
+        console.log('(screenY - 95) / clientY: \n' + (e.screenY - 95) / e.clientY);
+    }
+</script>
+</body>
+</html>

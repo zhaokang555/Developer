@@ -3,3 +3,14 @@
 */*/*/.idea/
 */*/*/*/.idea/
 */*/*/*/*/.idea/
+*.pbxproj
+
+clion/03-test/CMakeLists.txt
+
+*.xcworkspacedata
+
+*.xcuserstate
+
+*.xcscheme
+
+CPP/02/01-test/01-test.xcodeproj/xcuserdata/zhaokang.xcuserdatad/xcschemes/xcschememanagement.plist
