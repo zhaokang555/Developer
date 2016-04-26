@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<input type="text" id='input'></input>
+<script>
+    var input = document.getElementById('input');
+    input.onkeyup = function (e) {
+        var txt = input.value;    
+        var request;
+        if (window.XMLHttpRequest) {
+            request = new XMLHttpRequest();
+        } else {
+            request = new ActiveXObject('Microsoft.XMLHTTP');
+        }
+        request.onreadystatechange = function () { 
+            if (request.readyState === 4) { 
+                if (request.status === 200) {
+                    return success(request.responseText);
+                } 
+            } 
+        }
+        request.open('GET', 'someUrl' + txt, true);
+        request.send();
+    };
+</script>
+</body>
+</html>

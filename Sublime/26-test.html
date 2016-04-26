@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+* {
+    box-sizing: border-box;
+}
+ol li{
+    height:100px;
+}
+header {
+    height: 300px;
+    padding-top: 50px;
+}
+.nav {
+    background: #fff;
+    height: 80px;
+    z-index: 1;
+}
+.nav-scrolled {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.main {
+    background: green;
+}
+</style>
+</head>
+<body>
+<header>
+    <h1>标题1</h1>
+    <p>标题2</p>
+</header>
+<nav class="nav">
+    <a href="#">首页</a>
+    <a href="#">关于</a>
+    <a href="#">联系我</a>
+</nav>
+<div class="main">
+<ol>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ol>
+</div>
+<script>
+if (window.pageYOffset > document.documentElement.clientHeight) {
+    var header = document.getElementsByTagName('header')[0];
+    header.style.position = 'fixed';
+    header.style.top = '0px';
+}
+
+</script>
+</body>
+</html>
