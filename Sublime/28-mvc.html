@@ -1,0 +1,21 @@
+<html>
+	<head>
+	</head>
+	<body>
+		test
+		<button>click here to show</button>
+		
+		<script>
+			var M = {}, V = {}, C = {};
+
+			M.data = "hello world";
+
+			V.render = function (M) { document.write(M.data); }
+
+			C.handleOnclick = function () { V.render(M); }
+
+			document.querySelector('button').onclick = C.handleOnclick;
+			
+		</script>
+	</body>
+</html>
