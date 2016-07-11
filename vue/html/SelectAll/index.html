@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<title>Select all</title>
+<link rel="stylesheet" href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/myCSS.css">
+</head>
+<body>
+<div class="wrapper">
+    <form id="test-form" action="test">
+        <legend>请选择想要学习的编程语言：</legend>
+        <fieldset>
+            <div class="checkbox">
+                <p>
+                    <label class="selectAll">
+                        <input type="checkbox">
+                        <span class="selectAll">全选</span>
+                        <span class="deselectAll">取消全选</span>
+                    </label> 
+                    <a href="#0" class="invertSelect">反选</a>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="lang" value="javascript"> JavaScript
+                    </label>
+                </p>
+                <p><label><input type="checkbox" name="lang" value="python"> Python</label></p>
+                <p><label><input type="checkbox" name="lang" value="ruby"> Ruby</label></p>
+                <p><label><input type="checkbox" name="lang" value="haskell"> Haskell</label></p>
+                <p><label><input type="checkbox" name="lang" value="scheme"> Scheme</label></p>
+                <p><button type="submit">Submit</button></p>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+
+<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/myJS.js"></script>
+</body>
+</html>

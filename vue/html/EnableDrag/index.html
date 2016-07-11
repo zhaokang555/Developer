@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Drag</title>
+    <style>
+        #outerBox {
+            /* important: */
+            position: absolute;
+
+            /* not important: */
+            left: 100px;
+            top: 100px;
+            border: 1px solid #00cccc;
+            box-shadow: -5px 5px 10px #666666
+        }
+
+        #innerBar {
+            /* not important: */
+            background: #00cccc;
+            cursor: move;
+            line-height: 2.5rem;
+        }
+
+        #content {
+            /* not important: */
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+
+</head>
+<body>
+<a href="http://115.28.21.133/">回到首页</a>
+<div id="outerBox">
+    <div id="innerBar">Click here to drag</div>
+    <div id="content">
+        some content...
+
+    </div>
+
+</div>
+
+<script src="js/myJs.js"></script>
+</body>
+</html>

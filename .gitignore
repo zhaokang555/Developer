@@ -14,3 +14,8 @@ clion/03-test/CMakeLists.txt
 *.xcscheme
 
 CPP/02/01-test/01-test.xcodeproj/xcuserdata/zhaokang.xcuserdatad/xcschemes/xcschememanagement.plist
+
+
+ember/emberpractice/ember-quickstart/
+
+ember/emberpractice/super-rentals/
